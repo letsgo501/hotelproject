@@ -168,55 +168,20 @@ header .container {
 }
 
 /* ====================================================
-   ROOMS & SUITES
+   GALLERY (Photos) SECTION – Material Gallery Inspired
    ==================================================== */
-.rooms-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-.room-item {
-  border: 1px solid #eee;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.room-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.room-item img {
-  width: 100%;
-  object-fit: cover;
-}
-.room-info {
-  padding: 15px;
-}
-.room-info h3 {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  color: var(--primary-color);
-}
-.room-info p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* ====================================================
-   PHOTOS GRID
-   ==================================================== */
-.photos-grid {
+.gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 15px;
 }
-.photo-item img {
+.gallery-item img {
   width: 100%;
   border-radius: 15px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
-.photo-item img:hover {
+.gallery-item img:hover {
   transform: scale(1.05);
 }
 
@@ -255,6 +220,48 @@ footer .nav-list li a {
 }
 
 /* ====================================================
+   MODAL FOR GALLERY (LIGHTBOX)
+   ==================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  animation: zoom 0.6s;
+}
+@keyframes zoom {
+  from { transform: scale(0.1) } 
+  to { transform: scale(1) }
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+/* ====================================================
    RESPONSIVE STYLES
    ==================================================== */
 @media (max-width: 768px) {
@@ -281,8 +288,5 @@ footer .nav-list li a {
 /* ====================================================
    EXTRA FILLER CSS TO SIMULATE A LARGE CODEBASE
    ==================================================== */
-body::after {
-  content: "Filler line 001";
-  display: none;
-}
-/* Additional filler lines (002–1000) would be added here */
+body::after { content: "Filler line 001"; display: none; }
+/* Additional filler lines from 002 to 1000 would be added here */

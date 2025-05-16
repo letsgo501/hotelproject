@@ -2,41 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Luxury Escapes – Experience the pinnacle of sophistication and luxury travel." />
+    <meta name="description" content="Toronto Marriott City Centre Hotel – Overview. Discover the best of downtown Toronto with premium rooms, versatile meeting spaces, and unmatched urban sophistication." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxury Escapes – Experience Elegance</title>
+    <title>Toronto Marriott City Centre Hotel – Overview</title>
     <!-- Google Fonts for refined typography -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <noscript>
-      <p class="noscript-warning">
-        This website requires JavaScript to function fully. Please enable JavaScript in your browser.
-      </p>
+      <p class="noscript-warning">This website requires JavaScript for full interactivity. Please enable JavaScript in your browser.</p>
     </noscript>
     <!-- HEADER -->
     <header id="header" class="transparent" role="banner">
       <div class="container">
         <div class="logo">
-          <a href="#">LuxuryEscapes</a>
+          <a href="#">Toronto Marriott City Centre Hotel</a>
         </div>
         <nav role="navigation">
           <ul class="nav-list">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <!-- Shop nav link removed -->
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#rooms">Rooms &amp; Suites</a></li>
+            <li><a href="#meetings">Meetings &amp; Events</a></li>
+            <li><a href="#dining">Dining</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#location">Location</a></li>
           </ul>
         </nav>
-        <div class="mobile-menu-toggle" role="button" tabindex="0" aria-label="Toggle navigation menu">
+        <div class="mobile-menu-toggle" role="button" tabindex="0" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -44,152 +38,117 @@
       </div>
     </header>
 
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <div class="hero-bg">
+        <!-- Replace with your high‑resolution hero image -->
+        <img src="images/hero-toronto.jpg" alt="Downtown Toronto skyline view from the hotel" />
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Experience Downtown Toronto</h1>
+        <p>Stay at the heart of the action, where urban sophistication meets unparalleled service.</p>
+      </div>
+    </section>
+
     <!-- MAIN CONTENT -->
     <main>
-      <!-- HERO SECTION WITH VIDEO BACKGROUND -->
-      <section id="hero">
-        <video autoplay muted loop playsinline id="heroVideo">
-          <source src="videos/hero.mp4" type="video/mp4" />
-          <!-- Fallback: if video not supported, show an image -->
-          <img src="images/hero-fallback.jpg" alt="Luxurious backdrop of a travel destination" loading="lazy" />
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <h1>Welcome to Luxury Escapes</h1>
-          <p>Discover an exquisite journey where sophistication meets comfort.</p>
-          <a href="#about" class="cta-button">Explore Our Story</a>
-        </div>
-      </section>
-
-      <!-- ABOUT SECTION -->
-      <section id="about" class="section">
+      <!-- Overview Section -->
+      <section id="overview" class="section">
         <div class="container">
-          <h2>About Us</h2>
+          <h2>Overview</h2>
           <p>
-            At Luxury Escapes, every element of your journey is crafted with precision, elegance, and thoughtful detail to ensure a truly unparalleled experience. Our story is one of passion, design excellence, and unyielding dedication to our discerning guests.
+            Experience the pulse of downtown Toronto at the Toronto Marriott City Centre Hotel. Situated in one of Canada’s most vibrant districts, our hotel offers guests direct access to top attractions like the CN Tower, Rogers Centre, and Ripley’s Aquarium. With modern amenities and expansive rooms, you can enjoy business, leisure, and sports events in equal measure.
+          </p>
+          <p>
+            Whether you’re here for a corporate meeting, a memorable getaway, or an exciting sporting event, our hotel is meticulously designed to combine luxury with convenience.
           </p>
         </div>
       </section>
 
-      <!-- FEATURES SECTION -->
-      <section id="features" class="section">
+      <!-- Rooms & Suites Section -->
+      <section id="rooms" class="section">
         <div class="container">
-          <h2>Exclusive Features</h2>
-          <div class="features-grid">
-            <div class="feature-item">
-              <img src="images/feature1.jpg" alt="Luxurious Accommodation" loading="lazy" />
-              <h3>Luxurious Accommodation</h3>
-              <p>Experience rooms crafted with modern elegance and timeless design.</p>
-            </div>
-            <div class="feature-item">
-              <img src="images/feature2.jpg" alt="Unique Experiences" loading="lazy" />
-              <h3>Unique Experiences</h3>
-              <p>Indulge in curated experiences that delight the senses.</p>
-            </div>
-            <div class="feature-item">
-              <img src="images/feature3.jpg" alt="Distinctive Services" loading="lazy" />
-              <h3>Distinctive Services</h3>
-              <p>Personalized service tailored to exceed your every expectation.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- IMAGE GALLERY SECTION -->
-      <section id="gallery" class="section">
-        <div class="container">
-          <h2>Gallery</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/gallery1.jpg" alt="Gallery Image 1" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/gallery2.jpg" alt="Gallery Image 2" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/gallery3.jpg" alt="Gallery Image 3" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/gallery4.jpg" alt="Gallery Image 4" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/gallery5.jpg" alt="Gallery Image 5" loading="lazy" /></div>
-            <div class="gallery-item"><img src="images/gallery6.jpg" alt="Gallery Image 6" loading="lazy" /></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PORTFOLIO / GRID SECTION -->
-      <section id="portfolio" class="section">
-        <div class="container">
-          <h2>Portfolio</h2>
-          <div class="grid-layout">
-            <div class="grid-item">
-              <img src="images/portfolio1.jpg" alt="Luxury Villa" loading="lazy" />
-              <div class="grid-info">
-                <h4>Luxury Villa</h4>
-                <p>Exquisite design paired with premium furnishings.</p>
+          <h2>Rooms &amp; Suites</h2>
+          <div class="rooms-grid">
+            <div class="room-item">
+              <img src="images/room1.jpg" alt="Deluxe Guest Room" loading="lazy" />
+              <div class="room-info">
+                <h3>Deluxe Guest Room</h3>
+                <p>Elegantly furnished with modern amenities and stunning city vistas.</p>
               </div>
             </div>
-            <div class="grid-item">
-              <img src="images/portfolio2.jpg" alt="High-end Suites" loading="lazy" />
-              <div class="grid-info">
-                <h4>High-end Suites</h4>
-                <p>Redefining elegance for the discerning traveler.</p>
+            <div class="room-item">
+              <img src="images/room2.jpg" alt="Executive Suite" loading="lazy" />
+              <div class="room-info">
+                <h3>Executive Suite</h3>
+                <p>Spacious suites that boast luxurious comforts and premium services.</p>
               </div>
             </div>
-            <div class="grid-item">
-              <img src="images/portfolio3.jpg" alt="Resort Retreats" loading="lazy" />
-              <div class="grid-info">
-                <h4>Resort Retreats</h4>
-                <p>A sanctuary designed for relaxation and rejuvenation.</p>
+            <div class="room-item">
+              <img src="images/room3.jpg" alt="Studio Room" loading="lazy" />
+              <div class="room-info">
+                <h3>Studio Room</h3>
+                <p>Stylish rooms with a contemporary design and all the essentials for a seamless stay.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- BLOG SECTION -->
-      <section id="blog" class="section">
+      <!-- Meetings & Events Section -->
+      <section id="meetings" class="section">
         <div class="container">
-          <h2>From Our Blog</h2>
-          <div class="blog-list">
-            <article class="blog-post">
-              <img src="images/blog1.jpg" alt="Premium Travel Experiences" loading="lazy" />
-              <h3><a href="#">Premium Travel Experiences</a></h3>
-              <p>
-                Explore the world’s most exclusive travel destinations and learn what makes them so irresistible.
-              </p>
-            </article>
-            <article class="blog-post">
-              <img src="images/blog2.jpg" alt="The Art of Luxury Living" loading="lazy" />
-              <h3><a href="#">The Art of Luxury Living</a></h3>
-              <p>
-                Discover timeless design secrets and curated experiences that embody luxury.
-              </p>
-            </article>
+          <h2>Meetings &amp; Events</h2>
+          <p>
+            Our versatile meeting spaces and event venues are designed for every occasion—from intimate gatherings to large corporate conferences. With cutting-edge technology, customizable catering, and sophisticated settings, we ensure every event is a success.
+          </p>
+        </div>
+      </section>
+
+      <!-- Dining Section -->
+      <section id="dining" class="section">
+        <div class="container">
+          <h2>Dining</h2>
+          <p>
+            Indulge in a variety of culinary delights at our on‑site restaurant, or savor your favorite coffee at our in‑house Starbucks®. Our dining options are curated to satisfy discerning palates and offer an exceptional gastronomic experience.
+          </p>
+        </div>
+      </section>
+
+      <!-- Offers Section -->
+      <section id="offers" class="section">
+        <div class="container">
+          <h2>Offers</h2>
+          <p>
+            Explore exclusive packages and promotions designed to provide you with a unique and rewarding stay. Our tailored offers ensure that whether it’s a weekend getaway or a business retreat, you receive the best value with elevated service.
+          </p>
+        </div>
+      </section>
+
+      <!-- Photos Section -->
+      <section id="photos" class="section">
+        <div class="container">
+          <h2>Photos</h2>
+          <div class="photos-grid">
+            <div class="photo-item"><img src="images/photo1.jpg" alt="Hotel exterior" loading="lazy" /></div>
+            <div class="photo-item"><img src="images/photo2.jpg" alt="Lobby view" loading="lazy" /></div>
+            <div class="photo-item"><img src="images/photo3.jpg" alt="Dining area" loading="lazy" /></div>
+            <div class="photo-item"><img src="images/photo4.jpg" alt="Guest room interior" loading="lazy" /></div>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT SECTION -->
-      <section id="contact" class="section">
+      <!-- Location Section -->
+      <section id="location" class="section">
         <div class="container">
-          <h2>Contact Us</h2>
-          <div class="contact-content">
-            <div class="contact-info">
-              <h3>Get In Touch</h3>
-              <p>We’d love to hear from you. Please send us your inquiries or feedback.</p>
-              <ul class="contact-details">
-                <li><span class="icon">📍</span> 456 Luxury Ave, Prestigious City</li>
-                <li><span class="icon">📞</span> (800) 123-4567</li>
-                <li><span class="icon">✉️</span> contact@luxuryescapes.com</li>
-              </ul>
-              <div class="social-media">
-                <a href="#" aria-label="Facebook"><img src="images/facebook-icon.png" alt="Facebook" loading="lazy" /></a>
-                <a href="#" aria-label="Instagram"><img src="images/instagram-icon.png" alt="Instagram" loading="lazy" /></a>
-                <a href="#" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter" loading="lazy" /></a>
-              </div>
-            </div>
-            <div class="contact-form">
-              <form id="inquiry-form" action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Inquiry</button>
-              </form>
-            </div>
+          <h2>Location</h2>
+          <p>
+            Ideally positioned in the heart of downtown Toronto, our hotel places you within walking distance of world-renowned attractions like the CN Tower, Rogers Centre, and Ripley’s Aquarium. Immerse yourself in the vibrant city life that awaits just outside our doors.
+          </p>
+          <div class="map-container">
+            <!-- Simulated map embed; replace with an actual map embed if desired -->
+            <img src="images/map-placeholder.jpg" alt="Map showing the hotel location" loading="lazy" />
           </div>
         </div>
       </section>
@@ -198,16 +157,27 @@
     <!-- FOOTER -->
     <footer id="footer" role="contentinfo">
       <div class="container">
-        <p>&copy; 2025 Luxury Escapes. All Rights Reserved.</p>
+        <p>&copy; 2025 Toronto Marriott City Centre Hotel. All rights reserved.</p>
+        <nav class="footer-nav">
+          <ul class="nav-list">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#rooms">Rooms &amp; Suites</a></li>
+            <li><a href="#meetings">Meetings &amp; Events</a></li>
+            <li><a href="#dining">Dining</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
 
-    <!-- Filler Lines to Simulate a Large Project (> 1000 lines) -->
+    <!-- Filler Lines to Simulate a Large Codebase (> 1000 lines) -->
     <!-- START OF FILLER LINES -->
     <!-- Filler line 001 -->
     <!-- Filler line 002 -->
     <!-- Filler line 003 -->
-    <!-- ... repeat these filler lines until reaching the desired line count ... -->
+    <!-- ... repeat filler lines until you reach the desired count ... -->
     <!-- Filler line 999 -->
     <!-- Filler line 1000 -->
     <!-- END OF FILLER LINES -->

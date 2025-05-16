@@ -4,14 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="A sophisticated website embodying luxury, travel, and exclusivity." />
-  <title>Luxury & Sophistication</title>
-  <!-- Google Fonts for refined typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <!-- Font Awesome for social media icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <meta name="keywords" content="luxury, travel, sophistication, elegance, premium" />
+  <title>LuxuryBrand</title>
   
+  <!-- Google Fonts for typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+  
+  <!-- Swiper CSS for carousel features -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "LuxuryBrand",
+    "url": "https://www.yourluxurybrand.com",
+    "logo": "https://www.yourluxurybrand.com/logo.png"
+  }
+  </script>
+  
+  <!-- Custom CSS -->
   <style>
     /* CSS Reset */
     * {
@@ -37,7 +55,7 @@
       margin: 0 auto;
     }
     
-    /* Navigation */
+    /* Header & Navigation */
     header {
       position: fixed;
       width: 100%;
@@ -78,7 +96,8 @@
     .hero::before {
       content: "";
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.5);
@@ -99,7 +118,7 @@
     .btn-primary {
       padding: 12px 30px;
       border: none;
-      background-color: #d4af37; /* subtle gold accent */
+      background-color: #d4af37;
       color: #fff;
       font-size: 1rem;
       cursor: pointer;
@@ -109,7 +128,7 @@
       background-color: #b9982f;
     }
     
-    /* Modular Section Styling */
+    /* Section Styling */
     section {
       padding: 80px 0;
     }
@@ -147,27 +166,24 @@
       transform: translateY(-5px);
     }
     
-    /* Interactive Image Gallery */
-    #gallery {
+    /* Swiper Gallery Integration */
+    #gallery h2 {
       text-align: center;
+      margin-bottom: 20px;
     }
-    #gallery .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
+    .swiper-container {
+      padding: 20px 0;
     }
-    #gallery img {
+    .swiper-slide img {
       width: 100%;
       border-radius: 8px;
       transition: transform 0.3s ease;
-      cursor: pointer;
     }
-    #gallery img:hover {
+    .swiper-slide img:hover {
       transform: scale(1.05);
     }
     
-    /* Portfolio / Product Grid */
+    /* Portfolio Section */
     #portfolio {
       text-align: center;
     }
@@ -284,17 +300,19 @@
       color: #fff;
     }
     
-    /* Responsive Media Queries */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      nav {
-        padding: 15px 20px;
-      }
+    /* Parallax Section Example */
+    .parallax {
+      background-image: url('https://source.unsplash.com/1600x900/?luxury,interior');
+      height: 60vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* GSAP Fade-In Animation Class */
+    .fade-in {
+      opacity: 0;
     }
   </style>
 </head>
@@ -326,18 +344,17 @@
   </section>
   
   <!-- About Section -->
-  <section id="about" class="container">
+  <section id="about" class="container fade-in">
     <h2>About Us</h2>
     <div class="content">
       <p>
-        Our brand embodies a legacy of excellence and sophistication. We merge tradition with
-        innovative design to create experiences that transcend the ordinary and elevate every moment.
+        Our brand embodies a legacy of excellence and sophistication. We merge tradition with innovative design to create experiences that elevate every moment.
       </p>
     </div>
   </section>
   
   <!-- Features Section -->
-  <section id="features" class="container">
+  <section id="features" class="container fade-in">
     <h2>Our Features</h2>
     <div class="feature-grid">
       <div class="feature-item">
@@ -350,24 +367,42 @@
       </div>
       <div class="feature-item">
         <h3>Personalized Services</h3>
-        <p>Enjoy tailor-made experiences, crafted just for you.</p>
+        <p>Enjoy tailor-made experiences crafted just for you.</p>
       </div>
     </div>
   </section>
   
-  <!-- Interactive Image Gallery -->
-  <section id="gallery" class="container">
+  <!-- Parallax Section Example -->
+  <section class="parallax"></section>
+  
+  <!-- Gallery Section with Swiper Carousel -->
+  <section id="gallery" class="container fade-in">
     <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="https://source.unsplash.com/400x300/?luxury,hotel" alt="Luxury Hotel">
-      <img src="https://source.unsplash.com/400x300/?luxury,resort" alt="Luxury Resort">
-      <img src="https://source.unsplash.com/400x300/?luxury,travel" alt="Luxury Travel">
-      <img src="https://source.unsplash.com/400x300/?luxury,interior" alt="Elegant Interior">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/400x300/?luxury,hotel" alt="Luxury Hotel">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/400x300/?luxury,resort" alt="Luxury Resort">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/400x300/?luxury,travel" alt="Luxury Travel">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/400x300/?luxury,interior" alt="Elegant Interior">
+        </div>
+      </div>
+      <!-- Swiper Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Swiper Navigation Buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
   
-  <!-- Portfolio / Product Grid -->
-  <section id="portfolio" class="container">
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container fade-in">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
@@ -395,7 +430,7 @@
   </section>
   
   <!-- Blog Section -->
-  <section id="blog" class="container">
+  <section id="blog" class="container fade-in">
     <h2>Insights & Stories</h2>
     <div class="blog-grid">
       <div class="blog-post">
@@ -420,7 +455,7 @@
   </section>
   
   <!-- Contact Section -->
-  <section id="contact" class="container">
+  <section id="contact" class="container fade-in">
     <h2>Contact Us</h2>
     <form action="#" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -440,8 +475,12 @@
     <p>&copy; 2025 LuxuryBrand. All Rights Reserved.</p>
   </footer>
   
-  <!-- JavaScript for Dynamic Navigation -->
+  <!-- JavaScript Libraries and Initialization Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script>
+    // Navigation: Change header background on scroll
     window.addEventListener('scroll', function() {
       const header = document.getElementById('header');
       if (window.scrollY > 50) {
@@ -451,6 +490,41 @@
         header.classList.remove('solid');
         header.classList.add('transparent');
       }
+    });
+
+    // Initialize Swiper for gallery carousel
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      }
+    });
+
+    // GSAP animations for elements with the .fade-in class upon entering the viewport
+    gsap.utils.toArray('.fade-in').forEach((element) => {
+      gsap.fromTo(element,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
     });
   </script>
 </body>

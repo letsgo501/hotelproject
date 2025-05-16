@@ -1,31 +1,62 @@
 document.addEventListener("DOMContentLoaded", function () {
-  ////////////////////////////
+  "use strict";
+
+  // Debounce function for performance improvement on scroll events
+  function debounce(func, wait = 10, immediate = false) {
+    let timeout;
+    return function () {
+      let context = this,
+        args = arguments;
+      let later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      let callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
+
+  ////////////////////////////////
   // Header Background Toggle
-  ////////////////////////////
-  const header = document.querySelector("header");
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      header.classList.remove("transparent");
-      header.classList.add("solid");
-    } else {
-      header.classList.remove("solid");
-      header.classList.add("transparent");
+  ////////////////////////////////
+  const header = document.getElementById("header");
+  window.addEventListener(
+    "scroll",
+    debounce(function () {
+      if (window.scrollY > 50) {
+        header.classList.remove("transparent");
+        header.classList.add("solid");
+      } else {
+        header.classList.remove("solid");
+        header.classList.add("transparent");
+      }
+    })
+  );
+
+  ////////////////////////////////
+  // Mobile Menu Toggle (with keyboard accessibility)
+  ////////////////////////////////
+  const mobileToggle = document.querySelector(".mobile-menu-toggle");
+  const navList = document.querySelector("nav ul.nav-list");
+
+  function toggleMobileMenu() {
+    navList.classList.toggle("active");
+  }
+
+  mobileToggle.addEventListener("click", toggleMobileMenu);
+  mobileToggle.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      toggleMobileMenu();
+      e.preventDefault();
     }
   });
 
-  ////////////////////////////
-  // Mobile Menu Toggle
-  ////////////////////////////
-  const mobileToggle = document.querySelector(".mobile-menu-toggle");
-  const navList = document.querySelector("header nav ul");
-  mobileToggle.addEventListener("click", function () {
-    navList.classList.toggle("active");
-  });
-
-  ////////////////////////////
-  // Smooth Scrolling for Navigation
-  ////////////////////////////
-  const navLinks = document.querySelectorAll("header nav ul li a");
+  ////////////////////////////////
+  // Smooth Scrolling for Navigation Links
+  ////////////////////////////////
+  const navLinks = document.querySelectorAll("nav ul.nav-list li a");
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -37,44 +68,36 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: "smooth",
         });
       }
-      // Close mobile nav if open
       if (navList.classList.contains("active")) {
         navList.classList.remove("active");
       }
     });
   });
 
-  ////////////////////////////
+  ////////////////////////////////
   // Inquiry Form Submission Handling
-  ////////////////////////////
+  ////////////////////////////////
   const inquiryForm = document.getElementById("inquiry-form");
   inquiryForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    // Here you might add AJAX form submission or further validation
-    alert("Thank you for your inquiry! We will get back to you soon.");
+    // Here you can integrate an AJAX call or additional validation logic
+    alert("Thank you for your inquiry! We will get back to you shortly.");
     inquiryForm.reset();
   });
 
-  ////////////////////////////
-  // Additional Interactive Functions
-  ////////////////////////////
-  // (Optional: You may add gallery lightbox, smooth scroll effects, etc.)
-
-  ////////////////////////////
-  // Filler Code to Increase Total Lines
-  ////////////////////////////
-  // Dummy logging and function calls to simulate an extensive code base
-  for (let i = 1; i <= 100; i++) {
-    console.log("Filler JS line:", i);
-  }
+  ////////////////////////////////
+  // Additional Interactive Features (dummy fillers)
+  ////////////////////////////////
   function fillerFunction() {
-    // Simulate additional filler functionality
     return "Filler function executed";
   }
-  for (let i = 101; i <= 200; i++) {
-    console.log("Filler function call:", fillerFunction(), i);
+  for (let i = 1; i <= 100; i++) {
+    console.log("Debounced filler line:", i);
   }
-  // Insert many more filler lines or dummy functions here...
+  for (let j = 101; j <= 200; j++) {
+    console.log("Executing:", fillerFunction(), j);
+  }
+  // Additional filler code lines to simulate a large codebase…
   // Filler line 201
   // Filler line 202
   // ...
@@ -82,4 +105,3 @@ document.addEventListener("DOMContentLoaded", function () {
   // Filler line 999
   // Filler line 1000
 });
-
